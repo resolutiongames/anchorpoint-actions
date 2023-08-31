@@ -3,27 +3,26 @@
 #Environment Variables: e.g. ${MY_VARIABLE}
 #Full documentation: https://docs.anchorpoint.app/Actions/Reference
 
-version: 1.0
+version: "1.0"
 
 action:
   #Must Have Properties
-  name: RG / Export files to Project...
+  name: "New Action"
 
   #Optional Properties
   version: 1
-  id: ap::importToProject
-  category: rg/utility/export
+  id: "ap::newaction"
+  category: utility/code
   type: python
-  enable: true
-  author: Resolution Games
-  description: Export files to project
+  enable: false
+  author: "Anchorpoint Software GmbH"
 
   icon:
-    path: :/icons/pencil.svg
+    path: ":/icons/pencil.svg"
 
-  script: export_to_project.py
+  script: "new_action.py"
 
   #Where to register this action
   register:
     folder:
-      enable: true
+      filter: "*/actions/*" #Wildcard matching

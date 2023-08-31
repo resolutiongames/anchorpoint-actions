@@ -1,0 +1,31 @@
+#Anchorpoint Markup Language
+#Predefined Variables: e.g. ${path}
+#Environment Variables: e.g. ${MY_VARIABLE}
+#Full documentation: https://docs.anchorpoint.app/Actions/Reference
+
+version: 1.0
+
+action:
+  #Must Have Properties
+  name: Export files to...  
+
+  #Optional Properties
+  version: 1
+  id: ap::rg::exportToProject
+  category: rg/utility
+  type: python
+  enable: true
+  author: Resolution Games
+  description: Export files to project
+
+  icon:
+    path: ../resolution.png
+
+  script: export_to_project.py
+
+  #Where to register this action
+  register:
+    file: 
+      enable: true
+    folder:
+      enable: true

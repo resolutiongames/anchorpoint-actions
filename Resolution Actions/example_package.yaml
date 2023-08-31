@@ -1,0 +1,21 @@
+# Anchorpoint Markup Language
+# Predefined Variables: e.g. ${path}
+# Environment Variables: e.g. ${MY_VARIABLE}
+# Full documentation: https://docs.anchorpoint.app/Actions/Reference
+
+version: 1.0
+action:
+  name: Resolution Games Actions
+
+  version: 1
+  id: ap::rg::packageone
+  category: rg
+  type: package
+  enable: false
+  author: Resolution Games
+  description: A colection of actions to be used with Resolution Games anchorpoint projects
+  icon:
+    path: resolution.png
+
+  actions:
+    - ap::rg::exportToProject
