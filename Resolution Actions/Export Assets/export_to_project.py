@@ -20,8 +20,9 @@ def create_action(dialog):
     success, error = copy_all_files_and_folders(dialog.get_value(export_path_name_var))
     if (success):
             ui.show_success("Sucess!", "Files and folders copied to Unity Project", 3000)
-            return
-    ui.show_error("Error!", "Could not copy files and folders to Unity Project " + error, 3000)
+    else:
+        ui.show_error("Error!", "Could not copy files and folders to Unity Project " + error, 3000)
+    dialog.close()
 
 def browse_action(dialog):
     path = ui.open_tab(export_path_name_var)
